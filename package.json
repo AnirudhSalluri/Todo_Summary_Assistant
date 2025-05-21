@@ -1,0 +1,23 @@
+{
+  "name": "todo_summary_assistant",
+  "version": "1.0.0",
+  "description": "Todo Summary Assistant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "FrontEnd": "cd FrontEnd && npm start",
+    "BackEnd": "cd BackEnd && nodemon index.js",
+    "start": "nodemon BackEnd/index.js",
+    "prod": "node BackEnd/index.js",
+    "dev": "concurrently \"npm run BackEnd\" \"npm run FrontEnd\"",
+    "install-all": "npm install && cd FrontEnd && npm install && cd ../BackEnd && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
+
