@@ -126,17 +126,6 @@ const TodosPage = ({ onBack }) => {
 
   return (
     <div className="min-h-screen p-6 bg-gray-900 text-white">
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
 
       <div className="max-w-5xl mx-auto flex justify-between items-center mb-6">
         <button

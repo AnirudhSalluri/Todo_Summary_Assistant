@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
 
 const AddEditModal = ({ show, onClose, onSubmit, todo }) => {
   const [title, setTitle] = useState('');
@@ -27,6 +26,7 @@ const AddEditModal = ({ show, onClose, onSubmit, todo }) => {
   return (
     <>
      
+
       <div
         className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"
         onClick={onClose}
