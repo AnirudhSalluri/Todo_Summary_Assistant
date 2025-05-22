@@ -22,8 +22,5 @@
     "jsonwebtoken": "^9.0.2",
     "openai": "^4.102.0",
     "pg": "^8.16.0"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
