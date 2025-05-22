@@ -1,5 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
-const { generateSummary } = require('../utils/huggingfaceLLM');
+const { generateSummary } = require('../utils/cohereaiLLM');
 const { sendToSlack } = require('../utils/slack');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
