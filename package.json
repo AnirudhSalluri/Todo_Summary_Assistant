@@ -4,19 +4,16 @@
   "description": "Todo Summary Assistant",
   "main": "index.js",
   "scripts": {
-    "start:frontend": "cd FrontEnd && npm run dev",
-    "start:backend": "cd BackEnd && nodemon index.js",
-    "start": "nodemon BackEnd/index.js",
-    "start:prod": "node BackEnd/index.js",
-    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "install-all": "npm install && cd FrontEnd && npm install && cd ../BackEnd && npm install"
-  },
+  "install-all": "cd FrontEnd && npm install && npm run build && cd ../BackEnd && npm install",
+  "start": "node BackEnd/index.js"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.2",
+    "dotenv": "^16.5.0",
     "nodemon": "^3.0.2"
-  },
-  "devDependencies": {}
+  }
 }
