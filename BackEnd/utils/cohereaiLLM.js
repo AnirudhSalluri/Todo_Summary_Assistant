@@ -17,7 +17,7 @@ const generateSummary = async (todos) => {
     const response = await axios.post(
       'https://api.cohere.ai/v1/generate',
       {
-        model: 'command-r-plus', // or 'command-r'
+        model: 'command',
         prompt: prompt,
         max_tokens: 100,
         temperature: 0.3,
@@ -33,6 +33,8 @@ const generateSummary = async (todos) => {
     return response.data.generations?.[0]?.text?.trim() || 'No summary generated.';
   } catch (error) {
     console.error('Error generating summary:', error.response?.data || error.message);
+    console.log('Prompt sent to Cohere:', prompt);
+
     return 'Failed to generate summary.';
   }
 };

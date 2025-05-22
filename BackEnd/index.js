@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '../FrontEnd/dist')));
 
 app.use("/api",todoRoutes);
 
-app.get('*', (req, res) => {
+app.get(/(.*)/, (req, res) => {
   res.sendFile(path.join(__dirname, '../FrontEnd/dist/index.html'));
 });
 

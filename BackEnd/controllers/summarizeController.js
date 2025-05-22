@@ -19,9 +19,10 @@ const summarizeTodos = async (req, res) => {
     }
 
     const { data: todos, error } = await supabase
-      .from('Todo_List')
-      .select('*')
-      .eq('completed', false);
+  .from('Todo_List')
+  .select('*')
+  .order('created_at', { ascending: false });
+
 
     if (error) return res.status(500).json({ error: error.message });
 
